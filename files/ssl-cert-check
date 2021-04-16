@@ -337,7 +337,7 @@ elif [ -f /sbin/mail ]; then
 elif [ -f /usr/sbin/mail ]; then
     MAIL="/usr/sbin/mail"
     MAILMODE="mail"
-elif [ -f /usr/sbin/sendmail ]; then
+elif [ -f /usr/bin/swaks ]; then
     MAIL="/usr/bin/swaks"
     MAILMODE="swaks"
 else
