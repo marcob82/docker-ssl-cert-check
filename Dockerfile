@@ -1,13 +1,13 @@
-FROM debian:jessie
+FROM debian:buster
 
-MAINTAINER dario dario@dariozanzico.com
+MAINTAINER marcob82 marco@busslinger.at
 
 RUN \
   apt-get update && \
   apt-get install -y openssl heirloom-mailx && \
   rm -fr /var/lib/apt/lists/*
 
-COPY files/ssl-cert-check-v3.29 /ssl-cert-check
+COPY files/ssl-cert-check /ssl-cert-check
 COPY files/run.sh /run.sh
 COPY files/mailrc.template /tmp/
 
