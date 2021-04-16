@@ -4,7 +4,7 @@ MAINTAINER marcob82 marco@busslinger.at
 
 RUN \
   apt-get update && \
-  apt-get install -y postfix swaks openssl && \
+  apt-get install -y swaks openssl && \
   rm -fr /var/lib/apt/lists/*
 
 COPY files/ssl-cert-check /ssl-cert-check
