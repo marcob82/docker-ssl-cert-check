@@ -390,7 +390,7 @@ send_mail() {
     TO="${2}"
     SUBJECT="${3}"
     MSG="${4}"
-	swaks --to "$TO" --from "$SMTP_FROM" --body "$MSG" --server "$SMTP_URI" --auth LOGIN --auth-user "$SMTP_FROM" --auth-password "$SMTP_PASS" -tls --hide-all
+	swaks --to "$TO" --from "$SMTP_FROM" --header "Subject: $SUBJECT" --body "$MSG" --server "$SMTP_URI" --auth LOGIN --auth-user "$SMTP_FROM" --auth-password "$SMTP_PASS" -tls --hide-all
 }
 
 #############################################################################
