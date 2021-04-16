@@ -25,7 +25,7 @@ The checks will run only once unless `CHECK_INTERVAL` or `DAILY_TIME` variables 
 |`SMTP_FROM`|no|`ssl-cert-check@localhost.localdomain`| `From:` address for notifications emails.| 
 |`SMTP_USER`|no|| SMTP Username. <br>Required if `SEND_EMAIL` is set.| 
 |`SMTP_PASS`|no|| SMTP Password. <br>Required if `SEND_EMAIL` is set.|
-|`SMTP_URI`|no|| SMTP URI. Es: `smtps://mail.example.com:465"`. <br>Required if `SEND_EMAIL` is set.|
+|`SMTP_URI`|no|| SMTP URI. E.g.: `smtp.office365.com"`. <br>Required if `SEND_EMAIL` is set.|
 |`SMTP_TO`|no|| `To:` address for notifications emails. <br>Required if `SEND_EMAIL` is set.|
 |`WARNING_DAYS`|no|`30`|Minimum remaining days of certificate validity before notification.|
 |`CHECK_INTERVAL`|no||Duration (in seconds) of sleep between checks.|
