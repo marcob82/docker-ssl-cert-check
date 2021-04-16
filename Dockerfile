@@ -4,7 +4,7 @@ MAINTAINER marcob82 marco@busslinger.at
 
 RUN \
   apt-get update && \
-  apt-get install -y openssl heirloom-mailx && \
+  apt-get install -y postfix mailutil openssl heirloom-mailx && \
   rm -fr /var/lib/apt/lists/*
 
 COPY files/ssl-cert-check /ssl-cert-check
