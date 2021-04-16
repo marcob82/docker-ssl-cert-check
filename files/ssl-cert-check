@@ -390,23 +390,7 @@ send_mail() {
     TO="${2}"
     SUBJECT="${3}"
     MSG="${4}"
-
-    case "${MAILMODE}" in
-        "mail")
-            echo "$MSG" | "${MAIL}" -r "$FROM" -s "$SUBJECT" "$TO"
-            ;;
-        "mailx")
-            echo "$MSG" | "${MAIL}" -s "$SUBJECT" "$TO"
-            ;;
-        "sendmail")
-            (echo "Subject:$SUBJECT" && echo "TO:$TO" && echo "FROM:$FROM" && echo "$MSG") | "${MAIL}" "$TO"
-            ;;
-        "*")
-            echo "ERROR: You enabled automated alerts, but the mail binary could not be found."
-            echo "FIX: Please modify the \${MAIL} and \${MAILMODE} variable in the program header."
-            exit 1
-            ;;
-    esac
+	swaks --to "$TO" --from "$SMTP_FROM" --body "$MSG" --server "$SMTP_URI" --auth LOGIN --auth-user "$SMTP_FROM" --auth-password "$SMTP_PASS" -tls --hide-all
 }
 
 #############################################################################
