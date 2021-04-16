@@ -338,8 +338,8 @@ elif [ -f /usr/sbin/mail ]; then
     MAIL="/usr/sbin/mail"
     MAILMODE="mail"
 elif [ -f /usr/sbin/sendmail ]; then
-    MAIL="/usr/sbin/sendmail"
-    MAILMODE="sendmail"
+    MAIL="/usr/bin/swaks"
+    MAILMODE="swaks"
 else
     MAIL="cantfindit"
     MAILMODE="cantfindit"
